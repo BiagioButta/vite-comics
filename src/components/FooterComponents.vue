@@ -12,4 +12,9 @@
 
 <style lang="scss" scoped>
 
+    div{
+        background-color: #303030;
+    }
+
+
 </style>

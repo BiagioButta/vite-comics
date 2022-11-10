@@ -1,4 +1,6 @@
 <template>
+  <div class="container">
+    
   <div>
     <HeaderComponents/>
   </div>
@@ -10,6 +12,8 @@
   </div>
   <div>
     <FooterComponents/>
+  </div>
+
   </div>
 </template>
 
@@ -31,5 +35,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+  .container{
+    width: 100%;
+  }
+
 
 </style>
