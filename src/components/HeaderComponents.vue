@@ -35,10 +35,37 @@ import { toValidAssetId } from '@vue/compiler-core';
 
 <style lang="scss" scoped>
 
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     div{
         background-color: white;
         width: 70%;
+        height: 110px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul{
+        display: flex;
+
+        li{
+            list-style: none;
+            
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                margin-left: 50px;
+                color: black;
+                cursor: pointer;
+            }
+        }
     }
 
 </style>

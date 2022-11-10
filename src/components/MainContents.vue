@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>main</h1>
+        Content goes here, non ho capito cosa 
     </div>
 </template>
 
@@ -14,6 +14,9 @@
 
     div{
         background-color: #1C1C1C;
+        color: white;
+        height: 150px;
+        font-size: 2.5rem;
     }
 
 </style>
