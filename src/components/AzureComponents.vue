@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <div>
-        <ul>
-        <li v-for="(icon,index) in icons"> <img src="${{icon.img}}" alt="">  {{icon.link}}</li>
-        </ul>
+    <div class="w70pc">
+        <div class="h-align-center">
+            <ul>
+                <li v-for="(icon,index) in icons" :key="index"><a :href="icon.url"><img :src="getImagePath(`${icon.img}`)" alt="">  {{icon.link}}</a></li>
+            </ul>
         </div>
     </div>
 </template>
@@ -16,25 +16,35 @@
                 icons: [
                     {
                         img: '../assets/img/buy-comics-digital-comics.png',
-                        link: 'Digital Comics'
+                        link: 'Digital Comics',
+                        url: '#'
                     },
                     {
                         img: '../assets/img/buy-comics-merchandise.png',
-                        link: 'DC Merchandise'
+                        link: 'DC Merchandise',
+                        url: '#'
                     },
                     {
                         img: '../assets/img/buy-comics-subscriptions.png',
-                        link: 'subscription'
+                        link: 'subscription',
+                        url: '#'
                     },
                     {
                         img: '../assets/img/buy-comics-shop-locator.png',
-                        link: 'comics shop locator'
+                        link: 'comics shop locator',
+                        url: '#'
                     },
                     {
                         img: '../assets/img/buy-dc-power-visa.svg',
-                        link: 'Dc power Visa'
+                        link: 'Dc power Visa',
+                        url: '#'
                     }
                 ]
+            }
+        },
+        methods: {
+            getImagePath: function(imgPath) {
+                return new URL(imgPath, import.meta.url).href;
             }
         }
     }
@@ -42,31 +52,32 @@
 
 <style lang="scss" scoped>
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    div{
-        background-color: #0282F9;
-        width: 100%;
-        height: 200px;
-    }
-
     ul{
-        width: 70%;
-        margin: 0 auto;
         display: flex;
-        justify-content: center;
 
         li{
-            list-style: none;
-            text-transform: uppercase;
-            color: white;
+            a{
+                display: flex;
+                align-items: center;
+                color: white;
+                font-size: 1rem;
+                text-transform: uppercase;
+                margin: 0 10px;
+            }
         }
     }
 
+    img{
+        width: 50px;
+        height: 70px;
+    }
+
+    .h-align-center{
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
 
 </style>

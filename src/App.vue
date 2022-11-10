@@ -1,18 +1,18 @@
 <template>
-  <div class="container">
+  <div class="container debug">
     
-  <div>
-    <HeaderComponents/>
-  </div>
-  <div>
-    <MainContents/>
-  </div>
-  <div>
-    <AzureComponents/>
-  </div>
-  <div>
-    <FooterComponents/>
-  </div>
+    <div>
+      <HeaderComponents/>
+    </div>
+    <div class="bg-black">
+      <MainContents/>
+    </div>
+    <div class="bg-azure">
+      <AzureComponents/>
+    </div>
+    <div class="bg-grey">
+      <FooterComponents/>
+    </div>
 
   </div>
 </template>
@@ -37,8 +37,23 @@
 <style lang="scss" scoped>
 
   .container{
-    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 10px;
   }
+
+  .bg-azure{
+    background-color: #0282F9;
+  }
+
+  .bg-black{
+    background-color: #1C1C1C;
+  }
+
+  .bg-grey{
+    background-color: #303030;
+  }
+
 
 
 </style>

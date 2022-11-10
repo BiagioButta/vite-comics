@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="w70pc">
         <div class="bg-img"></div>
         <div class="social">
             <button>Sign Up now!</button>
             <div>
                 <span>Follow us</span>
-                <ul><li v-for="(social,index) in socialIcons"> <img src="${{social}}" alt=""></li></ul>
+                <ul><li v-for="(social,index) in socialIcons" :key="index"><a :href="social.url"><img :src="getImagePath(`${social.img}`)" alt=""></a></li></ul>
             </div>
         </div>
     </div>
@@ -17,47 +17,42 @@
         data() {
             return {
                 socialIcons: [
-                    '../assets/img/footer-facebook.png',
-                    '../assets/img/footer-twitter.png',
-                    '../assets/img/footer-youtube.png',
-                    '../assets/img/footer-periscope.png',
-                    '../assets/img/footer-pinterest.png'
+                    {
+                        img: '../assets/img/footer-facebook.png',
+                        url: '#'
+                    },
+                    {
+                        img: '../assets/img/footer-twitter.png',
+                        url: '#'
+                    },
+                    {
+                        img: '../assets/img/footer-youtube.png',
+                        url: '#'
+                    },
+                    {
+                        img: '../assets/img/footer-periscope.png',
+                        url: '#'
+                    },
+                    {
+                        img: '../assets/img/footer-pinterest.png',
+                        url: '#'
+                    }
+                  
                 ]
             }
         },
+        methods: {
+            getImagePath: function(imgPath) {
+                return new URL(imgPath, import.meta.url).href;
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    div{
-        width: 100%;
-        height: 500px;
-        background-color: #303030;
-    }
-
-    .bg-img{
-        background-image: url(../assets/img/footer-bg.jpg);
-    }
-
-    button{
-        background-color: transparent;
-        border-color: #0282F9;
-        text-transform: uppercase;
-        color: white;
-    }
-
-    span{
-        color: #0282F9;
-        text-transform: uppercase;
-    }
-
-
+   img{
+    width: 50px;
+   }
 
 </style>

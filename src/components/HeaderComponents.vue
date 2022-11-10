@@ -1,12 +1,19 @@
 <template>
-    <div>
-        <img src="../assets/img/dc-logo.png" alt="">
+    <div class="w70pc row">
+        <div class="col">
 
-        <ul>
-        <li v-for="(link,index) in linkNav"><a href="#">{{link}}</a></li>
-        </ul>
+            <img src="../assets/img/dc-logo.png" alt="">
+
+        </div>
+        <div class="col align-center">
+        
+            <ul>
+                <li v-for="(link,index) in linkNav"><a href="#">{{link}}</a></li>
+            </ul>
+        
+        </div>
+
     </div>
-
 </template>
 
 <script>
@@ -35,37 +42,27 @@ import { toValidAssetId } from '@vue/compiler-core';
 
 <style lang="scss" scoped>
 
-*{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+   
 
-    div{
-        background-color: white;
-        width: 70%;
-        height: 110px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    ul{
-        display: flex;
+    ul{ display: flex;
 
         li{
-            list-style: none;
-            
-            a{
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 1.5rem;
-                margin-left: 50px;
-                color: black;
-                cursor: pointer;
-            }
+            margin-left: 10px;
+            font-size: 1rem;
+            text-transform: uppercase;
         }
     }
+
+    .align-center{
+        display: flex;
+        align-items: center;
+    }
+    
+    img{
+        vertical-align: middle;
+    }
+
+
+
 
 </style>
