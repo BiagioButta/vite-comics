@@ -50,9 +50,7 @@
     background-color: #1C1C1C;
   }
 
-  .bg-grey{
-    background-color: #303030;
-  }
+ 
 
 
 
