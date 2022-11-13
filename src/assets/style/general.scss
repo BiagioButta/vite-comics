@@ -10,10 +10,10 @@ body{
     box-sizing: border-box;
 }
 
-.debug{
-    border: 1px solid black;
-    min-height: 50px;
-}
+// .debug{
+//     border: 1px solid white;
+//     min-height: 50px;
+// }
 
 .row{
     display: flex;
@@ -124,3 +124,11 @@ li{
         cursor: pointer;
     }
 }
+
+.hero-img{
+    background-image: url(../img/jumbotron.jpg);
+    width: 100%;
+    aspect-ratio: 4;
+    background-size: cover;
+}
+

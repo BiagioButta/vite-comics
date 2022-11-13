@@ -7,20 +7,20 @@
                 
                 <div class="col-1">
                     <ul><bold>DC</bold>
-                        <li v-for="(item,index) in linkFooterDcComics" :key="index">{{item}}</li>
+                        <li v-for="(item,index) in linkFooterDcComics" :key="index"><a href="">{{item}}</a></li>
                     </ul>
                     <ul><bold>DC</bold>
-                        <li v-for="(item,index) in linkFooterShop" :key="index">{{item}}</li>
-                    </ul>
-                </div>
-                <div class="col-1">
-                    <ul><bold>DC</bold>
-                        <li v-for="(item,index) in linkFooterDc" :key="index">{{item}}</li>
+                        <li v-for="(item,index) in linkFooterShop" :key="index"><a href="">{{item}}</a></li>
                     </ul>
                 </div>
                 <div class="col-1">
                     <ul><bold>DC</bold>
-                        <li v-for="(item,index) in linkFooterSites" :key="index">{{item}}</li>
+                        <li v-for="(item,index) in linkFooterDc" :key="index"><a href="">{{item}}</a></li>
+                    </ul>
+                </div>
+                <div class="col-1">
+                    <ul><bold>DC</bold>
+                        <li v-for="(item,index) in linkFooterSites" :key="index"><a href="">{{item}}</a></li>
                     </ul>
                 </div>
 
@@ -138,6 +138,10 @@
   .col-7{
     background-image: url(../assets/img/dc-logo-bg.png);
     background-size: cover;
+  }
+
+  a{
+    color: white;
   }
 
 
